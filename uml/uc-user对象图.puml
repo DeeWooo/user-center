@@ -1,0 +1,61 @@
+@startuml
+object user
+user : user_id
+user : ...
+
+object "第三方登录信息" as 3rd
+3rd : openid
+3rd : UnionID
+3rd : user_id
+3rd : ...
+
+object role
+role : role_id
+role : role_code
+role : scope
+role : ...
+
+object "user_role_relations" as urr
+urr : user_id
+urr : role_id
+
+object broker
+broker : superior_id
+broker : city_id
+broker : user_id
+broker : ...
+
+object certifier
+certifier : id
+certifier : user_id
+certifier : city_id
+certifier : district_id
+certifier : ...
+
+object "user_interests" as ui
+ui : user_id
+ui : role_code
+ui : ...
+
+object "user_pushtag" as ut
+ut : user_id
+ut : user_type
+ut : tag
+ut : ...
+
+user .."n" urr
+urr .. role
+urr <|-- broker
+urr <|-- certifier
+
+user .."n" 3rd
+
+user .. "n" ui
+
+user .. ut
+
+
+
+
+
+@enduml

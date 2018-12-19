@@ -1,0 +1,59 @@
+@startuml
+
+rectangle 完成 #Gainsboro{
+}
+rectangle 未完成 {
+}
+
+rectangle Phase4{
+rectangle 资源权限{
+}
+
+rectangle Phase3{
+rectangle 第三方授权{
+rectangle 三方用户信息{
+}
+}
+
+rectangle 收藏订阅{
+}
+rectangle 用户日志信息{
+(写入kafka)-->(ubt)
+}
+rectangle Phase2{
+rectangle 会员体系{
+rectangle 会员卡信息{
+}
+}
+rectangle 用户标签 #Gainsboro{
+}
+rectangle 积分体系{
+rectangle 积分信息 #Gainsboro{
+}
+}
+rectangle Phase1{
+rectangle 用户信息{
+rectangle 用户基础属性 #Gainsboro{
+}
+rectangle 用户角色属性{
+rectangle 经纪人 #Gainsboro{
+}
+rectangle 认证师 #Gainsboro{
+}
+}
+rectangle 用户扩展信息{
+rectangle 经纪人权益 #Gainsboro{
+}
+}
+}
+rectangle 基本账户体系{
+rectangle 登录验证 #Gainsboro{
+}
+rectangle 注册 #Gainsboro{
+}
+}
+}
+}
+}
+}
+@enduml

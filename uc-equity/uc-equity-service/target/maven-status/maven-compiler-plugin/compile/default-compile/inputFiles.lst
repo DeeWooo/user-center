@@ -1,0 +1,11 @@
+/Users/ivywu/projects/liyou/user-center/uc-equity/uc-equity-service/src/main/java/com/liyou/uc/dto/MemberBasisInfo.java
+/Users/ivywu/projects/liyou/user-center/uc-equity/uc-equity-service/src/main/java/com/liyou/uc/enume/MemberCardUseStatus.java
+/Users/ivywu/projects/liyou/user-center/uc-equity/uc-equity-service/src/main/java/com/liyou/uc/dto/MemberBuyReconrding.java
+/Users/ivywu/projects/liyou/user-center/uc-equity/uc-equity-service/src/main/java/com/liyou/uc/exception/MemberCardException.java
+/Users/ivywu/projects/liyou/user-center/uc-equity/uc-equity-service/src/main/java/com/liyou/uc/service/MemberCardClient.java
+/Users/ivywu/projects/liyou/user-center/uc-equity/uc-equity-service/src/main/java/com/liyou/uc/enume/Unit.java
+/Users/ivywu/projects/liyou/user-center/uc-equity/uc-equity-service/src/main/java/com/liyou/uc/enume/MemberCardSource.java
+/Users/ivywu/projects/liyou/user-center/uc-equity/uc-equity-service/src/main/java/com/liyou/uc/enume/MemberCardStatus.java
+/Users/ivywu/projects/liyou/user-center/uc-equity/uc-equity-service/src/main/java/com/liyou/uc/enume/MemberCardType.java
+/Users/ivywu/projects/liyou/user-center/uc-equity/uc-equity-service/src/main/java/com/liyou/uc/enume/MemberCardBuySource.java
+/Users/ivywu/projects/liyou/user-center/uc-equity/uc-equity-service/src/main/java/com/liyou/uc/dto/UserMemberCardInfo.java

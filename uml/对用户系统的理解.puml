@@ -1,0 +1,79 @@
+@startuml
+
+
+rectangle 授权体系{
+rectangle 登录/注册授权{
+rectangle 验证码{
+}
+rectangle 授权信息{
+}
+rectangle 注册{
+}
+}
+
+
+rectangle 权限管理{
+rectangle 角色  {
+}
+rectangle 资源权限{
+}
+
+角色 ..> 资源权限
+
+}
+}
+
+rectangle 用户信息{
+rectangle 用户基础属性 {
+}
+授权信息 <. 用户基础属性
+rectangle 用户角色属性{
+rectangle 经纪人{
+}
+rectangle 认证师{
+}
+}
+rectangle 第三方登录 {
+rectangle 三方用户信息{
+}
+}
+
+用户基础属性 .> 三方用户信息 
+
+rectangle 用户标签{
+}
+用户基础属性 .> 用户标签 
+
+rectangle 用户扩展信息{
+rectangle 经纪人权益{
+}
+
+rectangle 订阅收藏{
+}
+}
+用户基础属性 ..> 用户扩展信息 
+
+rectangle 用户日志信息{
+(写入kafka)-->(ubt)
+}
+
+rectangle 积分体系{
+rectangle 积分信息{
+}
+}
+用户基础属性 ..> 积分体系 
+
+rectangle 会员权益体系{
+rectangle 会员卡信息{
+}
+}
+用户基础属性 ..> 会员权益体系 
+
+}
+
+用户基础属性 <|.. 用户角色属性
+角色 <|. 用户角色属性
+
+
+
+@enduml

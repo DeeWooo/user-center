@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: uc-starter
+  profiles:
+    active: local
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  redis:
+    database: 1
+    timeout: 3000
+
+server:
+  context-path: /uc
+  port: 8080
+
+dubbo:
+  application:
+    name:user-center
+  protocol:
+    name: dubbo
+    port: -1
+  provider:
+    version: 1.0.0
+    timeout: 10000
+  consumer:
+    version: 1.0.0
+    check: false
+
+user-auth:
+  white-list:
+    mobile: 13900000000,13999999999
+    verification-code: 1688

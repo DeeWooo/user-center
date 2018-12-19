@@ -1,0 +1,41 @@
+@startuml
+
+package "uc-application"{
+[job]
+HTTP-[web]
+}
+
+package "uc-user(用户管理)" {
+[job]-->[uc-user-core]
+[web]-->[uc-user-core]
+PRC1 - [uc-user-service]
+[uc-user-service]--[uc-user-core]
+[uc-user-util]<-[uc-user-core]
+[uc-user-core]->[uc-user-dao]
+}
+
+
+package "uc-integral(积分管理)"{
+[job]-->[uc-integral-core]
+[uc-integral-service]-PRC2
+[uc-integral-service]--[uc-integral-core]
+[uc-integral-core] -> [uc-integral-util]
+[uc-integral-dao]<-[uc-integral-core]
+
+}
+
+package "uc-common"{
+
+[uc-user-core]-->[util]
+[uc-user-core]-->[constant]
+[uc-user-dao] --> [util]
+[uc-user-dao] --> [constant]
+
+[uc-integral-core]-->[util]
+[uc-integral-core]-->[constant]
+[uc-integral-dao]-->[util]
+[uc-integral-dao]-->[constant]
+
+}
+
+@enduml

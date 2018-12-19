@@ -1,0 +1,16 @@
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/config/RedisConfig.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/user/web/api/ThirdPartyAuthController.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/user/job/TokenJob.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/user/job/SimpleJobConfig.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/config/GlobalCorsConfiguration.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/model/UcUserAware.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/user/web/vo/LoginVO.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/user/web/otherapi/OthersController.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/user/web/GlobalExceptionHandler.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/user/job/SampleJob.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/model/UcResponse.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/config/ElasticJobConfig.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/user/job/BaseUserCenterJob.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/resolver/UcResponseBodyResolver.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/user/web/api/UserTagController.java
+/Users/ivywu/projects/liyou/user-center/uc-application/src/main/java/com/liyou/uc/UserCenterApplication.java

@@ -1,0 +1,7 @@
+com/liyou/uc/integral/service/impl/IntegralFacadeServiceImpl.class
+com/liyou/uc/integral/service/impl/AccountService.class
+com/liyou/uc/integral/service/impl/TradeHistorySerivce.class
+com/liyou/uc/integral/dao/AccountRepository.class
+com/liyou/uc/integral/dao/entity/TradeHistoryEntity.class
+com/liyou/uc/integral/dao/TradeHistoryRepository.class
+com/liyou/uc/integral/dao/entity/AccountEntity.class

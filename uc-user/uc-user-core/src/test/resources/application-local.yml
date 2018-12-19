@@ -1,0 +1,49 @@
+spring:
+  datasource:
+    url: jdbc:mysql://mysql.dev.tuboshi.co:3306/sHouseApp_pre?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: tbs
+    password: LangBoshi^666
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+      show-sql: true
+  redis:
+    host: localhost
+    port: 6379
+    password:
+
+dubbo:
+  application:
+    name: user-center
+  registry:
+    protocol: zookeeper
+    address: 47.98.104.193:2181
+
+elasticjob:
+  registry:
+    address: 47.98.104.193:2181
+    namespace: elastic-job
+
+# TODO 4秒一次也太频繁了————wudi：这是测试数据
+tokenJob:
+  cron: 0/4 * * * * ?
+  shardingTotalCount: 3
+  shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
+
+sampleJob:
+  cron: 0/4 * * * * ?
+  shardingTotalCount: 3
+  shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
+
+user-auth:
+  expire-in:
+    verification-code: 600
+  test1: 1
+  jwt:
+    tokenExpirationTime: 30 # Number of minutes 默认access token过期时间,默认30分钟，适合网页
+    refreshTokenExpTime: 60 # Minutes 默认的refresh token过期时间，默认30分钟，适合网页
+    tokenIssuer: http://liyou.co
+    tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
+
+

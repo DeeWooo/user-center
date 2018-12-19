@@ -1,0 +1,48 @@
+@startuml
+
+start
+:请求登录;
+:向第三方请求授权;
+if(第三方问询用户是否授权)then(false)
+    end
+else(true)
+    :向第三方请求授权临时票据code;
+    :通过code参数加上AppID和AppSecret等，
+    通过API换取access_token和openid;
+    :通过access_token和openid获取个人信息和UnionID;
+    if(openid和UnionID是否存在) then (true)
+        :更新第三方用户信息;
+    else (false)
+        :创建第三方用户信息;
+    endif
+
+    if(是否已绑定用户账号) then (true)
+        :更新用户信息;
+    else(false)
+        :创建用户;
+    endif
+
+    if(是否已绑定手机号) then  (false)
+        :输入绑定手机号;
+        if(手机号是否存在) then (true)
+            if(是否继续绑定) then (false)
+                :退出登录;
+                end
+            else (true)
+                :原手机号解绑;
+            endif
+        endif
+        :发验证码;
+        if(验证码校验) then(false)
+            end
+        else(true)
+            :手机号绑定;
+            note right : 需要产品帮忙确定账号合并时旧帐号的处理逻辑
+            :更新用户信息;
+        endif
+    endif
+
+:获取token;
+stop
+
+@enduml

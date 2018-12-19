@@ -1,0 +1,5 @@
+com/liyou/uc/others/business/CustomerBusiness.class
+com/liyou/uc/others/dao/entity/CustomerInfoEntity.class
+com/liyou/uc/others/dao/CustomerInfoRepository.class
+com/liyou/uc/others/service/impl/CustomerInfoServiceImpl.class
+com/liyou/uc/others/service/CustomerInfoService.class

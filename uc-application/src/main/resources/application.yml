@@ -1,0 +1,47 @@
+spring:
+  application:
+    name: uc-starter
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  redis:
+    database: 7
+    timeout: 3000
+
+#  cloud:
+#    zookeeper:
+#      connect-string: ${dubbo.registry.address}
+#      discovery:
+#        preferIpAddress: true
+#        uri-spec: {scheme}://{address}:{port}/${server.context-path}
+
+server:
+  context-path: /uc
+  port: 8081
+
+dubbo:
+  application:
+    name: user-center
+  protocol:
+    name: dubbo
+    port: -1
+  provider:
+    version: 1.0.0
+#    version: wdd
+    timeout: 10000
+  consumer:
+    version: 1.0.0
+
+#packet_enable: false
+
+user-auth:
+  white-list:
+    mobile: 13900000000,13999999999,18500000000,18511111111
+    verification-code: 1688
+

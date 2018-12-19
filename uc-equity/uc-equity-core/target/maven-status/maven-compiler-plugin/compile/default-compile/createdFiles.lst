@@ -1,0 +1,5 @@
+com/liyou/uc/service/impl/MemberCardClientImpl.class
+com/liyou/uc/dao/entity/MemberCardBasicInfoEntity.class
+com/liyou/uc/dao/MemberCardBuyRecordingRepository.class
+com/liyou/uc/dao/MemberCardBasicInfoRepository.class
+com/liyou/uc/dao/entity/MemberCardBuyRecordingEntity.class

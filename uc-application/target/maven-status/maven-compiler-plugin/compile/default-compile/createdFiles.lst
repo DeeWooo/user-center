@@ -1,0 +1,17 @@
+com/liyou/uc/user/web/GlobalExceptionHandler.class
+com/liyou/uc/model/UcResponse.class
+com/liyou/uc/user/web/otherapi/OthersController.class
+com/liyou/uc/user/web/vo/LoginVO.class
+com/liyou/uc/user/job/SampleJob.class
+com/liyou/uc/config/GlobalCorsConfiguration.class
+com/liyou/uc/config/RedisConfig$AppCacheErrorHandler.class
+com/liyou/uc/user/web/api/UserTagController.class
+com/liyou/uc/config/RedisConfig.class
+com/liyou/uc/UserCenterApplication.class
+com/liyou/uc/model/UcUserAware.class
+com/liyou/uc/user/web/api/ThirdPartyAuthController.class
+com/liyou/uc/config/ElasticJobConfig.class
+com/liyou/uc/user/job/TokenJob.class
+com/liyou/uc/user/job/SimpleJobConfig.class
+com/liyou/uc/resolver/UcResponseBodyResolver.class
+com/liyou/uc/user/job/BaseUserCenterJob.class

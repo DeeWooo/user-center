@@ -1,0 +1,7 @@
+com/liyou/uc/integral/enums/AccountScope.class
+com/liyou/uc/integral/exception/IntegralException.class
+com/liyou/uc/integral/dto/TradeHistory.class
+com/liyou/uc/integral/dto/Account.class
+com/liyou/uc/integral/service/IntegralParam.class
+com/liyou/uc/integral/service/TradeType.class
+com/liyou/uc/integral/service/IntegralFacadeService.class

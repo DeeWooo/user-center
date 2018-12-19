@@ -1,0 +1,143 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.liyou.user</groupId>
+    <artifactId>user-center</artifactId>
+    <version>1.1.5-SNAPSHOT</version>
+
+    <parent>
+        <artifactId>framework-parent</artifactId>
+        <groupId>com.liyou.framework</groupId>
+        <version>2.0.15</version>
+    </parent>
+
+    <modules>
+        <module>uc-common</module>
+        <module>uc-user</module>
+        <module>uc-integral</module>
+        <module>uc-equity</module>
+        <module>uc-others</module>
+        <module>uc-application</module>
+    </modules>
+
+    <name>user-center</name>
+    <packaging>pom</packaging>
+
+    <!-- 发布仓库 -->
+    <distributionManagement>
+        <repository>
+            <id>tbs-releases</id>
+            <name>Releases</name>
+            <url>http://gitlab.tuboshi.co:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>tbs-snapshots</id>
+            <name>Snapshots</name>
+            <url>http://gitlab.tuboshi.co:8081/nexus/content/repositories/snapshots/</url>
+            <uniqueVersion>true</uniqueVersion>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <!-- 属性配置 -->
+    <properties>
+        <java-jwt.version>3.3.0</java-jwt.version>
+        <liyou.message.version>1.1</liyou.message.version>
+        <elastic-job.version>2.1.5</elastic-job.version>
+        <hikari.version>2.7.8</hikari.version>
+        <curator.version>2.10.0</curator.version>
+        <spring-boot-admin-server.version>1.5.7</spring-boot-admin-server.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${hikari.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.liyou.user</groupId>
+                <artifactId>uc-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.liyou.user</groupId>
+                <artifactId>uc-user-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.liyou.user</groupId>
+                <artifactId>uc-others-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.liyou.user</groupId>
+                <artifactId>uc-integral-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.liyou.user</groupId>
+                <artifactId>uc-user-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.liyou.user</groupId>
+                <artifactId>uc-integral-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.liyou.user</groupId>
+                <artifactId>uc-equity-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.liyou.user</groupId>
+                <artifactId>uc-others-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.auth0</groupId>
+                <artifactId>java-jwt</artifactId>
+                <version>${java-jwt.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.liyou.msg</groupId>
+                <artifactId>msg-api</artifactId>
+                <version>1.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.dangdang</groupId>
+                <artifactId>elastic-job-lite-spring</artifactId>
+                <version>${elastic-job.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-recipes</artifactId>
+                <version>${curator.version}</version>
+            </dependency>
+
+            <!--<dependency>-->
+            <!--<groupId>org.springframework.cloud</groupId>-->
+            <!--<artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>-->
+            <!--</dependency>-->
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>

@@ -1,0 +1,33 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+:统一用户: <<User>> as u
+:微信平台: as 3rdparty
+
+
+
+rectangle App{
+
+(请求登录) <-u
+(请求登录) --> (3rdparty):请求授权
+(3rdparty)->u : 是否确认授权
+
+(确认授权)<--u
+(确认授权)-->(请求code)
+(请求code)-->(3rdparty)
+(请求code)<-(3rdparty):返回code
+}
+rectangle Server{
+(获取兔博士accesstoken)<-(请求code)
+(获取兔博士accesstoken)..>(获取第三方accesstoken) :include
+(获取第三方accesstoken)-->(3rdparty)
+
+(获取兔博士accesstoken)..>(获取getUserInfo) :include
+(获取getUserInfo)-->(3rdparty)
+(获取兔博士accesstoken)->(Auth2.0认证)
+
+(Auth2.0认证)<..(创建/获取第三方登录信息)
+}
+
+@enduml

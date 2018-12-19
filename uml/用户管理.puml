@@ -1,0 +1,55 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+:统一用户: <<User>> as u
+:经纪人: <<Broker>> as broker
+:认证师: <<Certifier>>as certifier
+:消息中心: as message
+:第三方用户登录信息 : as 3rdparty
+
+u<|-broker
+certifier--|>u
+
+rectangle 常规用户管理{
+u --> (注册)
+(注册)<|-- (注册为经纪人)
+(注册)<|-- (注册为C端用户)
+
+
+note "不同角色的注册操作" as Nregister
+(注册为C端用户) . Nregister
+Nregister . (注册为经纪人)
+
+u --> (发验证码)
+(发验证码)-> message
+u --> (登录)
+u --> (退出)
+u --> (鉴权)
+u --> (获取用户信息)
+(获取用户信息) ..> (获取角色信息) : include
+(获取用户信息) ..> (获取用户身份信息) : include
+(获取用户信息) ..> (获取用户附加信息) : include
+(获取用户附加信息) ..> (用户权益信息) : include
+(获取用户附加信息) ..> (用户推送标签) : include
+(获取用户身份信息) <|-- (获取经纪人信息)
+(获取用户身份信息) <|-- (获取认证师信息)
+
+note "各个角色的身份信息" as Nrole
+(获取经纪人信息) . Nrole
+Nrole . (获取认证师信息)
+
+u-->(维护用户信息)
+(维护用户信息)..>(维护用户身份信息): include
+(维护用户信息)..>(维护用户附加信息): include
+
+(维护用户附加信息) ..> (权益绑定/解绑) : include
+(维护用户身份信息) <|--(维护经纪人信息) 
+}
+
+3rdparty <. u
+
+
+
+
+@enduml

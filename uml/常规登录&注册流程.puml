@@ -1,0 +1,16 @@
+@startuml
+
+start
+: 获取验证码 ;
+if(验证码校验) then (验证不通过)
+    end
+else (验证通过)
+    if(账号校验) then (账号不存在)
+        :创建账号;
+    else(账号存在)
+    endif
+    :使用jwt机制生成token;
+endif
+stop
+
+@enduml

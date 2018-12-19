@@ -1,0 +1,11 @@
+com/liyou/uc/enume/MemberCardBuySource.class
+com/liyou/uc/service/MemberCardClient.class
+com/liyou/uc/enume/MemberCardType.class
+com/liyou/uc/dto/MemberBuyReconrding.class
+com/liyou/uc/dto/MemberBasisInfo.class
+com/liyou/uc/enume/Unit.class
+com/liyou/uc/enume/MemberCardSource.class
+com/liyou/uc/enume/MemberCardUseStatus.class
+com/liyou/uc/enume/MemberCardStatus.class
+com/liyou/uc/exception/MemberCardException.class
+com/liyou/uc/dto/UserMemberCardInfo.class

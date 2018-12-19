@@ -1,0 +1,44 @@
+spring:
+  datasource:
+    url: jdbc:mysql://mysql.test.tuboshi.co:3306/sHouseApp_pre?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: wudi
+    password: 78Y#QGNzv
+
+  redis:
+    host: redis.test.tuboshi.co
+    port: 6379
+    password: test
+
+dubbo:
+  application:
+    name: user-center
+  registry:
+    protocol: zookeeper
+    address: zk1.test.tuboshi.co:2181,zk2.test.tuboshi.co:2181,zk3.test.tuboshi.co:2181
+
+elasticjob:
+  registry:
+    address: zk1.test.tuboshi.co:2181,zk2.test.tuboshi.co:2181,zk3.test.tuboshi.co:2181
+    namespace: elastic-log
+
+tokenJob:
+  cron: 0 0/3 * * * ?
+  shardingTotalCount: 1
+  shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
+
+sampleJob:
+  cron: 0 0/3  * * * ?
+  shardingTotalCount: 1
+  shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
+
+user-auth:
+  expire-in:
+    verification-code: 300
+  test1: 1
+  jwt:
+    tokenExpirationTime: 120 # Number of minutes 默认access token过期时间,默认5分钟
+    refreshTokenExpTime: 180 # Minutes 默认的refresh token过期时间，默认1小时
+    tokenIssuer: http://liyou.co
+    tokenSigningKey: xm8EV6Hy5RMFK4EEACIDAwQus
+
+
