@@ -1,4 +1,4 @@
-#用户中心
+# 用户中心
 
 
 - uc-application为控制器，提供restapi和job
@@ -9,11 +9,11 @@
 - uc-common为公共模块
  
  
-#启动
+# 启动
 - 用户中心为独立服务，通过uc-applicatio中的UserCenterApplication启动
 
 
-#打包方式
+# 打包方式
 - 打包
    
    ````
